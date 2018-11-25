@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+		>
+	
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			>
+		
+		<TextView
+				android:layout_weight="0.2"
+				android:gravity="center"
+				android:text="类型"
+				android:textSize="20sp"
+				
+				android:id="@+id/insList_item_type"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				/>
+		
+		<TextView
+				android:layout_marginLeft="20dp"
+				android:gravity="center"
+				android:text="名称"
+				android:textSize="20sp"
+				android:layout_weight="0.2"
+				android:id="@+id/insList_item_name"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				/>
+		
+		<TextView
+				android:layout_marginLeft="20dp"
+				
+				android:gravity="center"
+				android:text="   值"
+				android:textSize="20sp"
+				android:layout_weight="0.2"
+				android:id="@+id/insList_item_value"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				/>
+		
+		<TextView
+				android:layout_marginLeft="20dp"
+				
+				android:gravity="center"
+				android:text="说明"
+				android:textSize="20sp"
+				android:layout_weight="0.2"
+				android:id="@+id/insList_item_info"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				/>
+	
+	
+	</LinearLayout>
+</LinearLayout>

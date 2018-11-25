@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">设置</string>
+    <string name="hello">Hello World, OpenglesActivity!</string>
+    <string name="app_name">云图文编译</string>
+    <string name="finish_edit">完成编辑</string>
+    <string name="ins_name_label">指令/程序名称</string>
+    <string name="ins_value_label">指令值</string>
+    <string name="ins_info_label">指令简介</string>
+    <string name="curent_tabel_label">当前表：</string>
+    <string name="label_ins_type">指令类型和名称</string>
+    <string-array name="variable_type">
+        <item>int</item>
+        <item>byte</item>
+        <item>long</item>
+        <item>string</item>
+        <item>array</item>
+    </string-array>
+    <string-array name="instruction_type">
+        <item>宏定义</item>
+        <item>基本函数</item>
+        <item>操作符</item>
+        <item>类与结构定义</item>
+        <item>GUI控件</item>
+    </string-array>
+</resources>

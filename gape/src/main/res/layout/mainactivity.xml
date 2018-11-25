@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+	
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="新建程序"
+			android:id="@+id/button"
+			android:layout_gravity="center_horizontal"/>
+	
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="打开程序"
+			android:id="@+id/button2"
+			android:layout_gravity="center_horizontal"/>
+	
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="运行程序"
+			android:id="@+id/button3"
+			android:layout_gravity="center_horizontal"/>
+	
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="指令集编辑:"
+			android:textSize="26sp"
+			android:textColor="@color/cyan"
+			/>
+	
+	<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical">
+		
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:text="选择平台"
+				android:id="@+id/textView"/>
+		
+		<Spinner
+				android:layout_width="144dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/spinner_choose_platform"
+				android:entries="@array/platforms"/>
+		
+		<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:text=""
+				android:id="@+id/show_platform_choice"/>
+	</LinearLayout>
+
+
+</LinearLayout>

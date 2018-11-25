@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:weightSum="1">
+	
+	<TextView
+			android:id="@+id/variable_label"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="变量编辑"
+			android:gravity="center"
+			android:textSize="24sp"
+			/>
+	
+	<TextView
+			android:id="@+id/variable_hint"
+			android:layout_marginLeft="5dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="请输入变量名称以及变量类型："
+			
+			/>
+	
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		
+		<Spinner
+				android:layout_weight="0.3"
+				android:layout_width="0dp"
+				android:entries="@array/variable_type"
+				android:layout_height="wrap_content"
+				android:id="@+id/spinner_variable_type"/>
+		
+		<EditText
+				
+				android:gravity="center_vertical"
+				android:layout_weight="0.7"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				
+				android:text=""
+				android:hint="请输入变量名"
+				android:id="@+id/text_variable_name"
+				android:layout_gravity="right"
+				/>
+	
+	</LinearLayout>
+	
+	<LinearLayout
+			android:layout_marginTop="20dp"
+			android:layout_marginBottom="20dp"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:layout_gravity="center_horizontal"
+			android:layout_height="wrap_content">
+		
+		<Button
+				android:id="@+id/btn_negtive"
+				android:layout_weight="0.5"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="取消"
+				/>
+		
+		<Button
+				android:id="@+id/btn_positive"
+				android:layout_weight="0.5"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="确定"
+				android:layout_marginLeft="20dp"
+				/>
+	
+	</LinearLayout>
+</LinearLayout>

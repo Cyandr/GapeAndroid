@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:weightSum="1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+		>
+	
+	<LinearLayout
+			android:layout_weight="0.4"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			>
+		
+		
+		<TextView
+				android:layout_marginTop="2dp"
+				android:gravity="center"
+				android:text="@string/curent_tabel_label"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/table_label"
+				/>
+		
+		<ListView
+				android:id="@+id/id_list_of_instructions"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+		
+		
+		</ListView>
+	</LinearLayout>
+	
+	<LinearLayout
+			android:layout_weight="0.6"
+			android:layout_margin="5dp"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			>
+		
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+			
+			<TextView
+					android:text="@string/label_ins_type"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/id_ins_type_label"
+					android:layout_weight="0.3"
+					/>
+			
+			<Spinner
+					
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:inputType="textPersonName"
+					android:entries="@array/instruction_type"
+					android:ems="10"
+					android:id="@+id/id_ins_type_edit"
+					android:layout_weight="0.7"
+					/>
+		</LinearLayout>
+		
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+			
+			<TextView
+					android:text="@string/ins_name_label"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/label1"
+					android:layout_weight="0.3"
+					/>
+			
+			<EditText
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:inputType="textPersonName"
+					android:ems="10"
+					android:id="@+id/Ed_ins_name"
+					android:layout_weight="0.7"
+					/>
+		</LinearLayout>
+		
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+			
+			<TextView
+					
+					android:text="@string/ins_value_label"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/textView4"
+					android:layout_weight="0.3"
+					/>
+			
+			<EditText
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:inputType="textPersonName"
+					android:ems="10"
+					android:id="@+id/Ed_ins_value"
+					android:layout_weight="0.7"
+					/>
+		</LinearLayout>
+		
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+			
+			<TextView
+					android:text="@string/ins_info_label"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/textView22"
+					android:layout_weight="0.3"
+					/>
+			
+			<EditText
+					
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:inputType="textPersonName"
+					android:ems="10"
+					android:id="@+id/Ed_ins_info"
+					android:layout_weight="0.7"
+					/>
+		</LinearLayout>
+		
+		<EditText
+				android:background="@color/cyan"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:inputType="textMultiLine"
+				android:ems="10"
+				
+				android:textSize="12sp"
+				android:gravity="top"
+				android:text="{}"
+				android:id="@+id/Ed_ins_Gparser"
+				android:layout_weight="0.5"
+				/>
+		
+		<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				>
+			
+			
+			<Button
+					android:paddingTop="1dp"
+					android:paddingBottom="1dp"
+					android:layout_weight="0.5"
+					android:text="+"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/btn_ins_add"
+					/>
+			
+			
+			<Button
+					android:paddingTop="1dp"
+					android:paddingBottom="1dp"
+					android:layout_weight="0.5"
+					android:text="-"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/btn_ins_delete"
+					/>
+		
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

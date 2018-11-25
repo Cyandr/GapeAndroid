@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="platforms">
+		<item>请选择平台</item>
+		<item>JAVA</item>
+		<item>CPP</item>
+		<item>FASM</item>
+	</string-array>
+	<string-array name="popups">
+		<item>变量</item>
+		<item>操作</item>
+		<item>类</item>
+		<item>运算</item>
+		<item>堆栈</item>
+	</string-array>
+</resources>

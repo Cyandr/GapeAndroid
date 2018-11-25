@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+		>
+	
+	<TextView
+			android:id="@+id/text_touch_tip"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			/>
+	
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+		
+		<ide.working.GPView
+				android:id="@+id/gpview"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"/>
+		
+		<Button
+				android:id="@+id/btn_operation"
+				android:layout_margin="10dp"
+				android:layout_alignParentLeft="true"
+				android:layout_alignParentBottom="true"
+				android:text="操作"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+		
+		<Button
+				android:id="@+id/btn_view_operate"
+				android:layout_margin="10dp"
+				android:layout_toRightOf="@+id/btn_operation"
+				android:layout_alignParentBottom="true"
+				android:text="视图"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+	</RelativeLayout>
+</LinearLayout>
