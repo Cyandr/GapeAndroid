@@ -28,7 +28,7 @@
         <activity android:name="com.gape.ide.working.OpenglesActivity"/>
         <activity android:name="com.gape.ide.working.DBManager"
                   android:immersive="true"
-                  android:theme="@android:style/Theme.NoTitleBar"
+                
                   android:uiOptions="splitActionBarWhenNarrow"
                   android:windowSoftInputMode="adjustPan"/>
     </application>

@@ -3,6 +3,7 @@ package com.gape.ide.working;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import com.gape.cyandr.gapeandroid.gape.R;
 /**
  * Created by cyandr on 2016/9/11 0011.
  */
-public class LanguageActivity extends Activity implements View.OnClickListener {
+public class LanguageActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn_new, btn_open, btn_run;
     Spinner spinner_choose_platform;
     GpeApplication myapp;

@@ -103,7 +103,7 @@ public class OpenglesActivity extends Activity {
         mInflator = LayoutInflater.from(this);
         LinearLayout pop = (LinearLayout) mInflator.inflate(R.layout.pop_operation, null);
         ListView instruction = pop.findViewById(R.id.list_instru);
-        if (!localDB.Db_is_opened()) localDB.open();
+        if (!localDB.Db_is_opened()) localDB.open(localDB.GetDbPath());
         LLS = localDB.readVariables();
         // localDB.close();
         Log.i("弹出窗口", "顺利弹出1");

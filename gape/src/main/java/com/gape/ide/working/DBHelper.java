@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
+import com.gape.cyandr.gapeandroid.gape.GpeApplication;
 import com.gape.cyandr.gapeandroid.gape.R;
 
 import java.io.*;
@@ -17,8 +19,7 @@ import java.util.List;
  */
 public class DBHelper {
     private static final String DB_NAME = "introduction.db"; //保存的数据库文件名
-    private static final String PACKAGE_NAME = "ide.working";
-    private static final String DB_PATH = "/data" + Environment.getDataDirectory().getAbsolutePath() + "/" + PACKAGE_NAME;
+
     private static final String DB_PATH2 = Environment.getExternalStorageDirectory() + "/" + "Gape";
     //在手机里存放数据库的位置
     private static final String OUT_PATH = Environment.getExternalStorageDirectory() + "/LGPSDataBase";
@@ -29,29 +30,37 @@ public class DBHelper {
     private static final String INS_INFO = "IInfo";
     private static final String INS_GPARSER = "IGparser";
     private SQLiteDatabase datab;
-    private String dbfile = DB_PATH + "/" + DB_NAME;
+
     private boolean db_is_opened = false;
     private Context mcontext;
     private String Current_Table;
 
 
     DBHelper(Context context) {
+
         mcontext = context;
         File paths = mcontext.getDatabasePath(DB_NAME);
         System.out.println(Environment.getDataDirectory().getAbsolutePath());
-        initDB();
+        initDB(GetDbPath());
 
     }
+public   String GetDbPath()
+{
+    String PACKAGE_NAME =   mcontext.getPackageName();
+    String DB_PATH = "/data" + Environment.getDataDirectory().getAbsolutePath() + "/" + PACKAGE_NAME;
+    return  DB_PATH + "/" + DB_NAME;
 
-    boolean open() {
-        datab = SQLiteDatabase.openOrCreateDatabase(dbfile, null);
+
+}
+    boolean open(String DbFile) {
+        datab = SQLiteDatabase.openOrCreateDatabase(DbFile, null);
         db_is_opened = true;
         return true;
     }
 
-    public boolean importDB() {
+    public boolean importDB(String DbFile) {
         try {
-            if (new File(dbfile).exists()) {//判断数据库文件是否存在，若不存在则执行导入，否则直接打开数据库
+            if (new File(DbFile).exists()) {//判断数据库文件是否存在，若不存在则执行导入，否则直接打开数据库
                 System.out.println("数据库存在****");
                 File outdata = new File(OUT_PATH);
                 if (!outdata.exists()) {
@@ -67,7 +76,7 @@ public class DBHelper {
                     target.createNewFile();
                 }
                 // InputStream is = mcontext.getResources().openRawResource(R.raw.data); //欲导入的数据库
-                File dbin = new File(dbfile);
+                File dbin = new File(DbFile);
                 FileInputStream fis = new FileInputStream(dbin);
                 FileOutputStream fos = new FileOutputStream(OUT_PATH + "/" + DB_NAME);
                 int BUFFER_SIZE = 40000;
@@ -84,6 +93,7 @@ public class DBHelper {
         } catch (FileNotFoundException e) {
             Log.e("Database", "File not found");
             e.printStackTrace();
+
         } catch (IOException e) {
             Log.e("Database", "IO exception");
             e.printStackTrace();
@@ -93,7 +103,7 @@ public class DBHelper {
         return false;
     }
 
-    private void initDB() {
+    private void initDB(String dbfile) {
         try {
             if (!(new File(dbfile).exists())) {//判断数据库文件是否存在，若不存在则执行导入，否则直接打开数据库
                 System.out.println(dbfile);
@@ -114,6 +124,8 @@ public class DBHelper {
         } catch (FileNotFoundException e) {
             Log.e("Database", "File not found");
             e.printStackTrace();
+
+
         } catch (IOException e) {
             Log.e("Database", "IO exception");
             e.printStackTrace();
